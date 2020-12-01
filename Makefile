@@ -154,7 +154,9 @@ $(OBJDIR)%.o: %.cu $(DEPS)
 obj:
 	mkdir -p obj
 backup:
-	mkdir -p backup
+	mkdir -p backup && \
+	cd backup && \
+	touch yolov3-tiny_obj_last.weights
 results:
 	mkdir -p results
 setchmod:
